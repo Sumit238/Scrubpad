@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.toolbox{
+    height: 600px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 2px rgb(248, 246, 246);
+    border-left: 1px solid black;
+}
+#canvas{
+    background-color: white;
+    box-shadow: 1px 1px 2px 2px rgb(248, 246, 246);
+}
+.colorPick{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colorPick>input{
+    width: 100%;
+}
+
