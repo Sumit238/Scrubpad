@@ -1,6 +1,29 @@
 .toolbox{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+    height: 100%;
+    
 }
+/*  */
+    
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

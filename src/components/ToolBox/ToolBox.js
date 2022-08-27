@@ -1,15 +1,26 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import './ToolBox.css'
-import React ,{useState} from "react"
 import PointerSize from './PointerSize'
 import ChangeColor from './ChangeColor'
 import ClearCanvas from './ClearCanvas'
+import EraserButton from './EraserButton'
+const Tools=(props)=>{
+    return(
+            <div className="toolbox">
+                    <span class="close" onClick={props.closeToolBox}>&times;</span>
+                    <PointerSize changeSize={props.changeSize} size={props.size} />
+                    <ChangeColor colorChange={props.colorChange}/>
+                    <ClearCanvas/>
+                    <EraserButton changeWriteMode={props.changeWriteMode}/>
+            </div>
+    )
+}
 const Toolbox=(props)=>{
     return(
-        <div className="toolbox">
-            <PointerSize changeSize={props.changeSize} size={props.size} changeSize={props.changeSize} />
-            <ChangeColor colorChange={props.colorChange}/>
-            <ClearCanvas/>
-        </div>
+        <React.Fragment>
+            {ReactDOM.createPortal(<Tools {...props}/>,document.getElementById('App'))}
+        </React.Fragment>
     ) 
 }
 export default Toolbox;
