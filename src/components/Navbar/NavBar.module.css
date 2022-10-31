@@ -4,14 +4,13 @@
   left: 0;
   width: 100%;
   height: 4rem;
-  background-color: #af4419;
+  background-color: #3b3736;
   color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 3%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  z-index: 10;
 }
 .navbar-brand {
   color: white;
