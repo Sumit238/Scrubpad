@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux';
 import styles from "../Canvas/DrawingCanvas.module.css";
 import { useEffect } from 'react';
 const DrawingCanvas=(props)=>{
-    const items=useSelector((state)=>state)
+    
+    const items=useSelector((state)=>state);
+    console.log("New Cansvas");
+    console.log("Helloooo",items)
     let prvX=undefined;
     let prvY=undefined;
     let isMousePressed=false;
@@ -70,17 +73,23 @@ const DrawingCanvas=(props)=>{
         return ;
     }
     const saveCanvas=(e)=>{
-        const id =items.DrawingPages.onDisplay
+        console.log(items)
+        const id =items.DrawingPages.onDisplay;
+        console.log(id, 'from save Canvas');
         const canvas=document.getElementById(id);
+        console.log(canvas)
         console.log('canvas saved')
         localStorage.setItem(id, canvas.toDataURL("image/jpeg", 1.0));
     }
     useEffect(() => {
-        const id =items.DrawingPages.onDisplay
+        const id =items.DrawingPages.onDisplay;
         if(!id){
             return;
         }
         var dataURL = localStorage.getItem(id);
+        if(!dataURL){
+            return;
+        }
         var img = new Image();
         img.src = dataURL;
         const canvas=document.getElementById(id);
@@ -88,13 +97,13 @@ const DrawingCanvas=(props)=>{
         img.onload = function () {
             ctx.drawImage(img, 0, 0);
         };
-      }, [])
+      })
       useEffect(() => {
         const intervalId = setInterval(saveCanvas, 5000)
       
         return () => clearInterval(intervalId); //This is important
        
-      }, [])
+      })
     
     
     return (
