@@ -6,8 +6,7 @@ const NavBar = (props) => {
       
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
-        <span className="navbar-brand">scrubpad</span>
-        <Toolbox />
+        <span className="navbar-brand">Scrubpad</span>
         </div>
         
         

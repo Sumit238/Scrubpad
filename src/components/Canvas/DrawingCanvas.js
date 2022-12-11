@@ -72,15 +72,15 @@ const DrawingCanvas=(props)=>{
         
         return ;
     }
-    const saveCanvas=(e)=>{
-        console.log(items)
-        const id =items.DrawingPages.onDisplay;
-        console.log(id, 'from save Canvas');
-        const canvas=document.getElementById(id);
-        console.log(canvas)
-        console.log('canvas saved')
-        localStorage.setItem(id, canvas.toDataURL("image/jpeg", 1.0));
-    }
+    // const saveCanvas=(e)=>{
+    //     console.log(items)
+    //     const id =items.DrawingPages.onDisplay;
+    //     console.log(id, 'from save Canvas');
+    //     const canvas=document.getElementById(id);
+    //     console.log(canvas)
+    //     console.log('canvas saved')
+    //     localStorage.setItem(id, canvas.toDataURL("image/png", 1.0));
+    // }
     useEffect(() => {
         const id =items.DrawingPages.onDisplay;
         if(!id){
@@ -98,19 +98,18 @@ const DrawingCanvas=(props)=>{
             ctx.drawImage(img, 0, 0);
         };
       })
-      useEffect(() => {
-        const intervalId = setInterval(saveCanvas, 5000)
-      
-        return () => clearInterval(intervalId); //This is important
-       
-      })
+    //   useEffect(() => {
+    //     const intervalId = setInterval(saveCanvas, 1000)
+    //     return () => clearInterval(intervalId); //This is important
+    //    })
     
     
     return (
     <React.Fragment>
         {!items.DrawingPages.onDisplay && <p style={{color:'white'}}>Please create New page</p>}
         {items.DrawingPages.onDisplay&& <><canvas id={items.DrawingPages.onDisplay} width="1000" className={styles['dr-canvas']} height="600"  onMouseMove={write} onMouseUp={setMouseUp} onMouseDown={setMouseDown}/>
-        <button onClick={saveCanvas}>Save</button></>}
+        {/* <button onClick={saveCanvas}>Save</button> */}
+        </>}
         
     </React.Fragment>
     )

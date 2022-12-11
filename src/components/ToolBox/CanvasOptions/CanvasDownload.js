@@ -1,6 +1,7 @@
 import React from "react"
 import jsPDF from "jspdf";
 import {useSelector } from "react-redux";
+import {BiDownload} from "react-icons/bi"; 
 const DownloadCanvas=(props)=>{
     const items=useSelector((state)=>state.DrawingPages);
     const downloadPDF=()=>{
@@ -18,7 +19,7 @@ const DownloadCanvas=(props)=>{
         doc.save('download.pdf');
     }
     return(
-        <button className="btn btn-secondary" onClick={downloadPDF}>Download</button>
+        <button className={props.className}><BiDownload/></button>
     )
 }
 
