@@ -1,3 +1,3 @@
--git clone this repo
--run : npm install 
--runnp start to run on local host
+# git clone this repo
+# run : npm install 
+# run : np start to run on local host
