@@ -19,7 +19,7 @@ const DownloadCanvas=(props)=>{
         doc.save('download.pdf');
     }
     return(
-        <button className={props.className}><BiDownload/></button>
+        <button className={props.className} onClick={downloadPDF}><BiDownload/></button>
     )
 }
 
