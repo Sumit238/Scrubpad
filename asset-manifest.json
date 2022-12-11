@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Scrubpad/static/css/main.9dc4b7c0.css",
+    "main.js": "/Scrubpad/static/js/main.3f9c6b2b.js",
+    "static/js/498.71d2491c.chunk.js": "/Scrubpad/static/js/498.71d2491c.chunk.js",
+    "static/js/703.f9f7df78.chunk.js": "/Scrubpad/static/js/703.f9f7df78.chunk.js",
+    "static/js/876.2c624480.chunk.js": "/Scrubpad/static/js/876.2c624480.chunk.js",
+    "index.html": "/Scrubpad/index.html",
+    "main.9dc4b7c0.css.map": "/Scrubpad/static/css/main.9dc4b7c0.css.map",
+    "main.3f9c6b2b.js.map": "/Scrubpad/static/js/main.3f9c6b2b.js.map",
+    "498.71d2491c.chunk.js.map": "/Scrubpad/static/js/498.71d2491c.chunk.js.map",
+    "703.f9f7df78.chunk.js.map": "/Scrubpad/static/js/703.f9f7df78.chunk.js.map",
+    "876.2c624480.chunk.js.map": "/Scrubpad/static/js/876.2c624480.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9dc4b7c0.css",
+    "static/js/main.3f9c6b2b.js"
+  ]
+}
